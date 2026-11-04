@@ -1,502 +1,577 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="scroll-smooth">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,
-initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med - Kantor
-Hukum</title>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-navy: {
-800: '#1e293b',
-900: '#0f172a',
-950: '#090d16',
-},
-gold: {
-400: '#e5c158',
-500: '#d4af37',
-600: '#b89728',
-}
-},
-fontFamily: {
-sans: ['Inter', 'sans-serif'],
-}
-}
-}
-}
-</script>
-<!-- Google Fonts -->
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;
-600;700&display=swap" rel="stylesheet">
-<!-- FontAwesome Icons -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/al
-l.min.css">
-<style>
-body { font-family: 'Inter', sans-serif; }
-</style>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden
-w-full relative">
-<!-- Navigation Bar -->
-<nav class="bg-navy-900 text-white sticky top-0 z-50 shadow-xl
-border-b border-gold-500/20 w-full">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between min-h-[5rem] py-3
-items-center relative">
-<!-- Logo / Name -->
-<a href="#beranda" class="flex items-center space-x-3
-group max-w-[80%] md:max-w-full relative z-50">
-<div class="w-10 h-10 rounded bg-gradient-to-tr
-from-gold-600 to-gold-400 flex-shrink-0 flex items-center
-justify-center text-navy-950 font-bold text-xl shadow-md
-group-hover:scale-105 transition">
-<i class="fa-solid fa-scale-balanced"></i>
-</div>
-<div class="flex flex-col min-w-0">
-<span class="text-base md:text-lg font-bold
-tracking-wide text-white leading-tight">Kantor Hukum</span>
-<span class="text-[10px] md:text-xs
-font-medium text-gold-400 leading-snug break-words mt-0.5">Johannes
-Hutasoit, A.Md., S.E., S.H., M.M., C.Med</span>
-</div>
-</a>
-<!-- Desktop Menu -->
-<div class="hidden md:flex items-center space-x-8
-text-sm font-medium">
-<a href="#beranda" class="text-gold-400
-hover:text-gold-300 transition">Beranda</a>
-<a href="#profil" class="text-slate-300
-hover:text-gold-400 transition">Data Diri</a>
-<a href="#layanan" class="text-slate-300
-hover:text-gold-400 transition">Layanan</a>
-</div>
-<!-- WA Button Nav (Desktop) -->
-<div class="hidden md:flex items-center">
-<a href="https://wa.me/6281314715708"
-target="_blank" class="bg-emerald-600 text-white font-semibold px-5
-py-2.5 rounded-lg shadow-lg hover:bg-emerald-500 transition transform
-active:scale-95 text-sm flex items-center border border-emerald-400">
-<i class="fa-brands fa-whatsapp text-lg
-mr-2"></i>Konsultasi WA
-</a>
-</div>
-<!-- Mobile Menu Toggle (HP) -->
-<div class="md:hidden flex items-center flex-shrink-0
-relative z-50">
-<button type="button"
-onclick="document.getElementById('mobile-menu').classList.toggle('hidd
-en')" class="text-slate-300 hover:text-white focus:outline-none p-2
-cursor-pointer touch-manipulation">
-<i class="fa-solid fa-bars text-3xl"></i>
-</button>
-</div>
-</div>
-</div>
-<!-- Mobile Menu Dropdown (Diperbaiki posisinya agar menimpa
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>
+      Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med - Kantor Hukum
+    </title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: "#1e293b",
+                900: "#0f172a",
+                950: "#090d16",
+              },
+              gold: {
+                400: "#e5c158",
+                500: "#d4af37",
+                600: "#b89728",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;
+600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/al
+l.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden w-full relative"
+  >
+    <!-- Navigation Bar -->
+    <nav
+      class="bg-navy-900 text-white sticky top-0 z-50 shadow-xl border-b border-gold-500/20 w-full"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex justify-between min-h-[5rem] py-3 items-center relative"
+        >
+          <!-- Logo / Name -->
+          <a
+            href="#beranda"
+            class="flex items-center space-x-3 group max-w-[80%] md:max-w-full relative z-50"
+          >
+            <div
+              class="w-10 h-10 rounded bg-gradient-to-tr from-gold-600 to-gold-400 flex-shrink-0 flex items-center justify-center text-navy-950 font-bold text-xl shadow-md group-hover:scale-105 transition"
+            >
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span
+                class="text-base md:text-lg font-bold tracking-wide text-white leading-tight"
+                >Kantor Hukum</span
+              >
+              <span
+                class="text-[10px] md:text-xs font-medium text-gold-400 leading-snug break-words mt-0.5"
+                >Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med</span
+              >
+            </div>
+          </a>
+          <!-- Desktop Menu -->
+          <div
+            class="hidden md:flex items-center space-x-8 text-sm font-medium"
+          >
+            <a
+              href="#beranda"
+              class="text-gold-400 hover:text-gold-300 transition"
+              >Beranda</a
+            >
+            <a
+              href="#profil"
+              class="text-slate-300 hover:text-gold-400 transition"
+              >Data Diri</a
+            >
+            <a
+              href="#layanan"
+              class="text-slate-300 hover:text-gold-400 transition"
+              >Layanan</a
+            >
+          </div>
+          <!-- WA Button Nav (Desktop) -->
+          <div class="hidden md:flex items-center">
+            <a
+              href="https://wa.me/6281314715708"
+              target="_blank"
+              class="bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg hover:bg-emerald-500 transition transform active:scale-95 text-sm flex items-center border border-emerald-400"
+            >
+              <i class="fa-brands fa-whatsapp text-lg mr-2"></i>Konsultasi WA
+            </a>
+          </div>
+          <!-- Mobile Menu Toggle (HP) -->
+          <div class="md:hidden flex items-center flex-shrink-0 relative z-50">
+            <button
+              type="button"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidd
+en')"
+              class="text-slate-300 hover:text-white focus:outline-none p-2 cursor-pointer touch-manipulation"
+            >
+              <i class="fa-solid fa-bars text-3xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu Dropdown (Diperbaiki posisinya agar menimpa
 konten dengan baik) -->
-<div id="mobile-menu" class="hidden md:hidden absolute
-top-full left-0 w-full bg-navy-950 border-b border-slate-800 px-4 pt-3
-pb-5 space-y-3 shadow-2xl z-40">
-<a href="#beranda"
-onclick="document.getElementById('mobile-menu').classList.add('hidden'
-)" class="block py-2 px-3 rounded text-slate-200 hover:bg-navy-900
-font-medium">Beranda</a>
-<a href="#profil"
-onclick="document.getElementById('mobile-menu').classList.add('hidden'
-)" class="block py-2 px-3 rounded text-slate-200 hover:bg-navy-900
-font-medium">Data Diri</a>
-<a href="#layanan"
-onclick="document.getElementById('mobile-menu').classList.add('hidden'
-)" class="block py-2 px-3 rounded text-slate-200 hover:bg-navy-900
-font-medium">Layanan</a>
-<a href="https://wa.me/6281314715708" target="_blank"
-class="block py-3 px-3 mt-4 rounded-lg text-center bg-emerald-600
-text-white font-bold flex items-center justify-center shadow-lg">
-<i class="fa-brands fa-whatsapp text-xl
-mr-2"></i>Konsultasi Sekarang
-</a>
-</div>
-</nav>
-<!-- 1. HERO SECTION -->
-<header id="beranda" class="relative bg-navy-900 text-white
-overflow-hidden py-20 lg:py-32 w-full">
-<div class="absolute inset-0 opacity-5
-bg-[radial-gradient(#d4af37_1px,transparent_1px)]
-[background-size:20px_20px]"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative
-z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-<div class="max-w-2xl lg:w-2/3 w-full">
-<!-- FITUR WEBSITE VISITOR (Dipindah ke sini) -->
-<div class="flex flex-col items-start justify-start
-mb-8">
-<span class="text-gold-400 text-xs font-semibold
-mb-2 tracking-widest uppercase">Website Visitor</span>
-<!-- Kotak angka yang di-generate oleh Javascript
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-navy-950 border-b border-slate-800 px-4 pt-3 pb-5 space-y-3 shadow-2xl z-40"
+      >
+        <a
+          href="#beranda"
+          onclick="
+            document.getElementById('mobile-menu').classList.add('hidden')
+          "
+          class="block py-2 px-3 rounded text-slate-200 hover:bg-navy-900 font-medium"
+          >Beranda</a
+        >
+        <a
+          href="#profil"
+          onclick="
+            document.getElementById('mobile-menu').classList.add('hidden')
+          "
+          class="block py-2 px-3 rounded text-slate-200 hover:bg-navy-900 font-medium"
+          >Data Diri</a
+        >
+        <a
+          href="#layanan"
+          onclick="
+            document.getElementById('mobile-menu').classList.add('hidden')
+          "
+          class="block py-2 px-3 rounded text-slate-200 hover:bg-navy-900 font-medium"
+          >Layanan</a
+        >
+        <a
+          href="https://wa.me/6281314715708"
+          target="_blank"
+          class="block py-3 px-3 mt-4 rounded-lg text-center bg-emerald-600 text-white font-bold flex items-center justify-center shadow-lg"
+        >
+          <i class="fa-brands fa-whatsapp text-xl mr-2"></i>Konsultasi Sekarang
+        </a>
+      </div>
+    </nav>
+    <!-- 1. HERO SECTION -->
+    <header
+      id="beranda"
+      class="relative bg-navy-900 text-white overflow-hidden py-20 lg:py-32 w-full"
+    >
+      <div
+        class="absolute inset-0 opacity-5 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:20px_20px]"
+      ></div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <div class="max-w-2xl lg:w-2/3 w-full">
+          <!-- FITUR WEBSITE VISITOR (Dipindah ke sini) -->
+          <div class="flex flex-col items-start justify-start mb-8">
+            <span
+              class="text-gold-400 text-xs font-semibold mb-2 tracking-widest uppercase"
+              >Website Visitor</span
+            >
+            <!-- Kotak angka yang di-generate oleh Javascript
 -->
-<div id="visitor-counter" class="flex space-x-1
-sm:space-x-1.5"></div>
-</div>
-<div class="inline-flex items-center space-x-2
-bg-navy-800 border border-gold-500/30 px-3.5 py-1.5 rounded-full
-text-xs font-semibold text-gold-400 mb-6 shadow">
-<i class="fa-solid fa-briefcase"></i>
-<span>Kantor Hukum & Praktisi Legal
-Profesional</span>
-</div>
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold
-tracking-tight leading-tight mb-6">
-Pendampingan Hukum <span class="text-transparent
-bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Tepat,
-Strategis, & Profesional</span>
-</h1>
-<p class="text-slate-300 text-lg mb-8 leading-relaxed
-font-light">
-Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med
-menghadirkan solusi hukum holistik. Berpengalaman dalam menangani
-sengketa pajak, litigasi perdata/pidana, mediasi, hingga penasihat
-hukum korporasi.
-</p>
-<div class="flex flex-col sm:flex-row gap-4 w-full">
-<a href="https://wa.me/6281314715708"
-target="_blank" class="bg-emerald-600 border-2 border-emerald-500
-text-white font-bold px-8 py-4 rounded-xl
-shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:bg-emerald-500
-hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all
-text-center flex items-center justify-center group">
-<i class="fa-brands fa-whatsapp text-2xl mr-3
-group-hover:scale-110 transition-transform"></i>
-Diskusi via WhatsApp
-</a>
-<a href="#profil" class="bg-navy-800 border
-border-slate-700 hover:border-gold-500 text-white font-semibold px-8
-py-4 rounded-xl transition text-center flex items-center
-justify-center">
-Pelajari Profil Saya
-</a>
-</div>
-</div>
-<!-- Hero Image / Illustration -->
-<div class="lg:w-1/3 w-full flex justify-center relative
-mt-8 lg:mt-0">
-<div class="absolute inset-0 bg-gold-500 rounded-full
-blur-3xl opacity-10"></div>
-<img src="assets/img/foto diri.png" alt="Johannes
-Hutasoit, A.Md., S.E., S.H., M.M., C.Med" class="relative z-10 w-full
-max-w-sm rounded-2xl shadow-2xl border-4 border-navy-800 outline
-outline-1 outline-gold-500/50 object-cover bg-slate-800">
-</div>
-</div>
-</header>
-<!-- 2. DATA DIRI / ABOUT ME -->
-<section id="profil" class="py-24 bg-white w-full
-overflow-hidden">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16
-items-center">
-<!-- Left: Credibility Badge & Image -->
-<div class="relative order-2 lg:order-1 w-full
-max-w-md mx-auto lg:max-w-none">
-<div class="aspect-[4/5] rounded-3xl
-overflow-hidden bg-slate-100 border border-slate-200 shadow-xl
-relative z-10 w-full">
-<img
-src="https://placehold.co/600x800/f8fafc/1e293b?text=Profil+Lengkap"
-alt="Profil Hukum" class="w-full h-full object-cover bg-slate-200">
-</div>
-<!-- Experience Badge -->
-<div class="absolute -bottom-6 -right-2
-sm:-right-6 bg-navy-900 text-white p-5 sm:p-6 rounded-2xl shadow-2xl
-border border-gold-500/30 z-20 w-40 sm:w-48">
-<div class="text-gold-400 text-2xl sm:text-3xl
-font-bold mb-1">Berlisensi</div>
-<div class="text-[10px] sm:text-xs
-text-slate-300">Resmi Terdaftar & Bersumpah di Pengadilan Tinggi</div>
-</div>
-<div class="absolute -top-4 -left-4 w-24 h-24
-bg-gold-500 rounded-full opacity-10 blur-xl"></div>
-</div>
-<!-- Right: Content -->
-<div class="order-1 lg:order-2 w-full">
-<span class="text-gold-600 font-bold
-tracking-widest uppercase text-xs">Profil & Kredensial</span>
-<h2 class="text-2xl sm:text-3xl font-bold
-text-navy-900 mt-2 mb-6 break-words">Johannes Hutasoit, A.Md., S.E.,
-S.H., M.M., C.Med</h2>
-<p class="text-slate-600 mb-6 leading-relaxed
-text-justify">
-Sebagai praktisi hukum profesional, saya
-berdedikasi untuk memberikan pembelaan dan kepastian hukum yang
-proporsional. Dengan latar belakang pendidikan hukum yang kuat dan jam
-terbang penanganan berbagai kasus riil, saya menjunjung tinggi kode
-etik advokat dan kerahasiaan klien.
-</p>
-<div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3">
-<i class="fa-solid fa-check-circle
-text-gold-500 mt-1 flex-shrink-0"></i>
-<div>
-<h4 class="font-bold text-navy-900
-text-sm">Pemahaman Hukum Komprehensif</h4>
-<p class="text-xs text-slate-500
-mt-0.5">Analisis masalah dari berbagai sudut pandang hukum perdata,
-pidana, dan administrasi.</p>
-</div>
-</div>
-<div class="flex items-start space-x-3">
-<i class="fa-solid fa-check-circle
-text-gold-500 mt-1 flex-shrink-0"></i>
-<div>
-<h4 class="font-bold text-navy-900
-text-sm">Pendekatan Penyelesaian Damai (Win-Win)</h4>
-<p class="text-xs text-slate-500
-mt-0.5">Mengutamakan mediasi dan negosiasi sebelum menempuh jalur
-pengadilan yang panjang.</p>
-</div>
-</div>
-<div class="flex items-start space-x-3">
-<i class="fa-solid fa-check-circle
-text-gold-500 mt-1 flex-shrink-0"></i>
-<div>
-<h4 class="font-bold text-navy-900
-text-sm">Integritas & Transparansi</h4>
-<p class="text-xs text-slate-500
-mt-0.5">Proses hukum, risiko, dan estimasi biaya yang jelas dan
-terbuka sejak awal konsultasi.</p>
-</div>
-</div>
-</div>
-<a href="https://wa.me/6281314715708"
-target="_blank" class="inline-flex items-center font-bold
-text-emerald-600 hover:text-emerald-700 transition">
-Hubungi Saya Langsung <i class="fa-solid
-fa-arrow-right ml-2 text-sm"></i>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- 3. LAYANAN PRAKTIK -->
-<section id="layanan" class="py-24 bg-navy-900 text-white relative
-w-full">
-<div class="absolute inset-0 bg-gradient-to-b from-navy-900
-to-navy-950"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative
-z-10">
-<div class="text-center max-w-3xl mx-auto mb-16">
-<span class="text-gold-400 font-bold tracking-widest
-uppercase text-xs">Area Praktik Utama</span>
-<h2 class="text-3xl sm:text-4xl font-bold mt-2
-mb-4">Layanan Jasa Hukum Profesional</h2>
-<p class="text-slate-300 text-sm">Fokus keahlian
-spesifik untuk menjawab kebutuhan personal maupun bisnis Anda secara
-tepat dan terukur.</p>
-</div>
-<!-- 4 Cards Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8
-w-full">
-<!-- Card 1 -->
-<div class="bg-navy-800 border border-slate-700
-hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all
-hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group">
-<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl
-bg-navy-950 text-gold-400 flex items-center justify-center text-2xl
-sm:text-3xl mb-6 shadow-inner group-hover:scale-110
-transition-transform">
-<i class="fa-solid
-fa-file-invoice-dollar"></i>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold mb-3
-text-white">1. Pengacara Pajak</h3>
-<p class="text-slate-400 text-sm leading-relaxed
-mb-6">
-Memberikan pendampingan dalam pemeriksaan
-pajak, pengajuan keberatan, penyelesaian sengketa, hingga beracara di
-Pengadilan Pajak untuk melindungi hak Wajib Pajak badan maupun orang
-pribadi, berpengalaman di pt. astra honda motor divisi accounting dan
-teks selama 13 tahun dan bersertifikat AB dari dua Lembaga pendidikan.
-</p>
-<a
-href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
+            <div
+              id="visitor-counter"
+              class="flex space-x-1 sm:space-x-1.5"
+            ></div>
+          </div>
+          <div
+            class="inline-flex items-center space-x-2 bg-navy-800 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-gold-400 mb-6 shadow"
+          >
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Kantor Hukum & Praktisi Legal Profesional</span>
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6"
+          >
+            Pendampingan Hukum
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600"
+              >Tepat, Strategis, & Profesional</span
+            >
+          </h1>
+          <p class="text-slate-300 text-lg mb-8 leading-relaxed font-light">
+            Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med menghadirkan
+            solusi hukum holistik. Berpengalaman dalam menangani sengketa pajak,
+            litigasi perdata/pidana, mediasi, hingga penasihat hukum korporasi.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 w-full">
+            <a
+              href="https://wa.me/6281314715708"
+              target="_blank"
+              class="bg-emerald-600 border-2 border-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:bg-emerald-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all text-center flex items-center justify-center group"
+            >
+              <i
+                class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:scale-110 transition-transform"
+              ></i>
+              Diskusi via WhatsApp
+            </a>
+            <a
+              href="#profil"
+              class="bg-navy-800 border border-slate-700 hover:border-gold-500 text-white font-semibold px-8 py-4 rounded-xl transition text-center flex items-center justify-center"
+            >
+              Pelajari Profil Saya
+            </a>
+          </div>
+        </div>
+        <!-- Hero Image / Illustration -->
+        <div class="lg:w-1/3 w-full flex justify-center relative mt-8 lg:mt-0">
+          <div
+            class="absolute inset-0 bg-gold-500 rounded-full blur-3xl opacity-10"
+          ></div>
+          <img
+            src="assets/img/foto diri.png"
+            alt="Johannes
+Hutasoit, A.Md., S.E., S.H., M.M., C.Med"
+            class="relative z-10 w-full max-w-sm rounded-2xl shadow-2xl border-4 border-navy-800 outline outline-1 outline-gold-500/50 object-cover bg-slate-800"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- 2. DATA DIRI / ABOUT ME -->
+    <section id="profil" class="py-24 bg-white w-full overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Left: Credibility Badge & Image -->
+          <div
+            class="relative order-2 lg:order-1 w-full max-w-md mx-auto lg:max-w-none"
+          >
+            <div
+              class="aspect-[4/5] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl relative z-10 w-full"
+            >
+              <img
+                src="https://placehold.co/600x800/f8fafc/1e293b?text=Profil+Lengkap"
+                alt="Profil Hukum"
+                class="w-full h-full object-cover bg-slate-200"
+              />
+            </div>
+            <!-- Experience Badge -->
+            <div
+              class="absolute -bottom-6 -right-2 sm:-right-6 bg-navy-900 text-white p-5 sm:p-6 rounded-2xl shadow-2xl border border-gold-500/30 z-20 w-40 sm:w-48"
+            >
+              <div class="text-gold-400 text-2xl sm:text-3xl font-bold mb-1">
+                Berlisensi
+              </div>
+              <div class="text-[10px] sm:text-xs text-slate-300">
+                Resmi Terdaftar & Bersumpah di Pengadilan Tinggi
+              </div>
+            </div>
+            <div
+              class="absolute -top-4 -left-4 w-24 h-24 bg-gold-500 rounded-full opacity-10 blur-xl"
+            ></div>
+          </div>
+          <!-- Right: Content -->
+          <div class="order-1 lg:order-2 w-full">
+            <span
+              class="text-gold-600 font-bold tracking-widest uppercase text-xs"
+              >Profil & Kredensial</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-bold text-navy-900 mt-2 mb-6 break-words"
+            >
+              Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med
+            </h2>
+            <p class="text-slate-600 mb-6 leading-relaxed text-justify">
+              Sebagai praktisi hukum profesional, saya berdedikasi untuk
+              memberikan pembelaan dan kepastian hukum yang proporsional. Dengan
+              latar belakang pendidikan hukum yang kuat dan jam terbang
+              penanganan berbagai kasus riil, saya menjunjung tinggi kode etik
+              advokat dan kerahasiaan klien.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start space-x-3">
+                <i
+                  class="fa-solid fa-check-circle text-gold-500 mt-1 flex-shrink-0"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-sm">
+                    Pemahaman Hukum Komprehensif
+                  </h4>
+                  <p class="text-xs text-slate-500 mt-0.5">
+                    Analisis masalah dari berbagai sudut pandang hukum perdata,
+                    pidana, dan administrasi.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i
+                  class="fa-solid fa-check-circle text-gold-500 mt-1 flex-shrink-0"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-sm">
+                    Pendekatan Penyelesaian Damai (Win-Win)
+                  </h4>
+                  <p class="text-xs text-slate-500 mt-0.5">
+                    Mengutamakan mediasi dan negosiasi sebelum menempuh jalur
+                    pengadilan yang panjang.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i
+                  class="fa-solid fa-check-circle text-gold-500 mt-1 flex-shrink-0"
+                ></i>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-sm">
+                    Integritas & Transparansi
+                  </h4>
+                  <p class="text-xs text-slate-500 mt-0.5">
+                    Proses hukum, risiko, dan estimasi biaya yang jelas dan
+                    terbuka sejak awal konsultasi.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/6281314715708"
+              target="_blank"
+              class="inline-flex items-center font-bold text-emerald-600 hover:text-emerald-700 transition"
+            >
+              Hubungi Saya Langsung
+              <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3. LAYANAN PRAKTIK -->
+    <section id="layanan" class="py-24 bg-navy-900 text-white relative w-full">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-navy-900 to-navy-950"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-gold-400 font-bold tracking-widest uppercase text-xs"
+            >Area Praktik Utama</span
+          >
+          <h2 class="text-3xl sm:text-4xl font-bold mt-2 mb-4">
+            Layanan Jasa Hukum Profesional
+          </h2>
+          <p class="text-slate-300 text-sm">
+            Fokus keahlian spesifik untuk menjawab kebutuhan personal maupun
+            bisnis Anda secara tepat dan terukur.
+          </p>
+        </div>
+        <!-- 4 Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
+          <!-- Card 1 -->
+          <div
+            class="bg-navy-800 border border-slate-700 hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group"
+          >
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-navy-950 text-gold-400 flex items-center justify-center text-2xl sm:text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">
+              1. Pengacara Pajak
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Memberikan pendampingan dalam pemeriksaan pajak, pengajuan
+              keberatan, penyelesaian sengketa, hingga beracara di Pengadilan
+              Pajak untuk melindungi hak Wajib Pajak badan maupun orang pribadi.
+            </p>
+            <a
+              href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
 %20ingin%20konsultasi%20terkait%20layanan%20Pengacara%20Pajak."
-target="_blank" class="text-emerald-400 text-sm font-semibold
-hover:text-emerald-300 flex items-center transition">
-<i class="fa-brands fa-whatsapp mr-2
-text-lg"></i> Konsultasi Pajak
-</a>
-</div>
-<!-- Card 2 -->
-<div class="bg-navy-800 border border-slate-700
-hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all
-hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group">
-<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl
-bg-navy-950 text-gold-400 flex items-center justify-center text-2xl
-sm:text-3xl mb-6 shadow-inner group-hover:scale-110
-transition-transform">
-<i class="fa-solid fa-handshake-angle"></i>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold mb-3
-text-white">2. Mediator Non Hakim</h3>
-<p class="text-slate-400 text-sm leading-relaxed
-mb-6 text-justify">
-Menjadi fasilitator pihak ketiga yang netral
-untuk menyelesaikan sengketa perdata, bisnis, maupun keluarga
-(waris/gono-gini) di luar pengadilan. Mediator non hakim bersertifikat
-sudah terdaftar di PN Jakarta Barat, PN Jakarta Pusat, PN Jakarta
-Timur, PN Jakarta Selatan, PN Jakarta Utara, PN Bekasi, PN Cikarang,
-PN Purwakarta, PN Karawang, dan PN Bandung.
-</p>
-<a
-href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
-%20butuh%20bantuan%20Mediator%20Non%20Hakim." target="_blank"
-class="text-emerald-400 text-sm font-semibold hover:text-emerald-300
-flex items-center transition">
-<i class="fa-brands fa-whatsapp mr-2
-text-lg"></i> Permintaan Mediasi
-</a>
-</div>
-<!-- Card 3 -->
-<div class="bg-navy-800 border border-slate-700
-hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all
-hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group">
-<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl
-bg-navy-950 text-gold-400 flex items-center justify-center text-2xl
-sm:text-3xl mb-6 shadow-inner group-hover:scale-110
-transition-transform">
-<i class="fa-solid fa-gavel"></i>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold mb-3
-text-white">3. Advokat (Litigasi)</h3>
-<p class="text-slate-400 text-sm leading-relaxed
-mb-6">
-Bertindak selaku kuasa hukum untuk
-mendampingi, mewakili, dan melakukan pembelaan hak klien pada proses
-beracara di pengadilan perdata, pidana, agama, maupun Pengadilan
-Hubungan Industrial (PHI).
-</p>
-<a
-href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
-%20butuh%20jasa%20Advokat%20untuk%20perkara%20hukum." target="_blank"
-class="text-emerald-400 text-sm font-semibold hover:text-emerald-300
-flex items-center transition">
-<i class="fa-brands fa-whatsapp mr-2
-text-lg"></i> Hubungi Advokat
-</a>
-</div>
-<!-- Card 4 -->
-<div class="bg-navy-800 border border-slate-700
-hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all
-hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group">
-<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl
-bg-navy-950 text-gold-400 flex items-center justify-center text-2xl
-sm:text-3xl mb-6 shadow-inner group-hover:scale-110
-transition-transform">
-<i class="fa-solid fa-building-shield"></i>
-</div>
-<h3 class="text-xl sm:text-2xl font-bold mb-3
-text-white">4. Konsultan Hukum</h3>
-<p class="text-slate-400 text-sm leading-relaxed
-mb-6">
-Memberikan nasihat hukum preventif (Legal
-Advice), penyusunan opini hukum (Legal Opinion), audit kepatuhan
-korporasi (Legal Due Diligence), hingga tinjauan dan pembuatan
-kontrak/perjanjian bisnis (Drafting Contract).
-</p>
-<a
-href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
+              target="_blank"
+              class="text-emerald-400 text-sm font-semibold hover:text-emerald-300 flex items-center transition"
+            >
+              <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Konsultasi
+              Pajak
+            </a>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-navy-800 border border-slate-700 hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group"
+          >
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-navy-950 text-gold-400 flex items-center justify-center text-2xl sm:text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">
+              2. Mediator Non Hakim
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6 text-justify">
+              Menjadi fasilitator pihak ketiga yang netral untuk menyelesaikan
+              sengketa perdata, bisnis, maupun keluarga (waris/gono-gini) di
+              luar pengadilan.
+            </p>
+            <a
+              href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
+%20butuh%20bantuan%20Mediator%20Non%20Hakim."
+              target="_blank"
+              class="text-emerald-400 text-sm font-semibold hover:text-emerald-300 flex items-center transition"
+            >
+              <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Permintaan
+              Mediasi
+            </a>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-navy-800 border border-slate-700 hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group"
+          >
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-navy-950 text-gold-400 flex items-center justify-center text-2xl sm:text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-gavel"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">
+              3. Advokat (Litigasi)
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Bertindak selaku kuasa hukum untuk mendampingi, mewakili, dan
+              melakukan pembelaan hak klien pada proses beracara di pengadilan
+              perdata, pidana, agama, maupun Pengadilan Hubungan Industrial
+              (PHI).
+            </p>
+            <a
+              href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
+%20butuh%20jasa%20Advokat%20untuk%20perkara%20hukum."
+              target="_blank"
+              class="text-emerald-400 text-sm font-semibold hover:text-emerald-300 flex items-center transition"
+            >
+              <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Hubungi Advokat
+            </a>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-navy-800 border border-slate-700 hover:border-gold-500/50 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-[0_8px_30px_rgba(212,175,55,0.1)] group"
+          >
+            <div
+              class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-navy-950 text-gold-400 flex items-center justify-center text-2xl sm:text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-building-shield"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold mb-3 text-white">
+              4. Konsultan Hukum
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Memberikan nasihat hukum preventif (Legal Advice), penyusunan
+              opini hukum (Legal Opinion), audit kepatuhan korporasi (Legal Due
+              Diligence), hingga tinjauan dan pembuatan kontrak/perjanjian
+              bisnis (Drafting Contract).
+            </p>
+            <a
+              href="https://wa.me/6281314715708?text=Halo%20Bapak%20Johannes,%20saya
 %20butuh%20layanan%20Konsultan%20Hukum%20untuk%20bisnis."
-target="_blank" class="text-emerald-400 text-sm font-semibold
-hover:text-emerald-300 flex items-center transition">
-<i class="fa-brands fa-whatsapp mr-2
-text-lg"></i> Konsultasi Legal Bisnis
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. CALL TO ACTION & FOOTER -->
-<footer class="bg-navy-950 pt-20 pb-10 border-t border-gold-500/20
-w-full overflow-hidden">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8
-text-center">
-<div class="w-16 h-16 mx-auto rounded-full bg-navy-900
-border border-gold-500 text-gold-400 flex items-center justify-center
-text-2xl mb-6">
-<i class="fa-solid fa-scale-unbalanced"></i>
-</div>
-<h2 class="text-2xl sm:text-3xl font-bold text-white
-mb-4">Butuh Pendampingan Hukum?</h2>
-<p class="text-slate-400 mb-8 max-w-2xl mx-auto text-sm
-leading-relaxed">
-Jangan biarkan masalah hukum Anda berlarut-larut.
-Konsultasikan sekarang untuk mendapatkan analisis awal dan estimasi
-langkah penanganan yang tepat, aman, dan rahasia.
-</p>
-<!-- Tombol WA saja (Email Dihapus) -->
-<div class="flex flex-col sm:flex-row items-center
-justify-center gap-4 mb-8">
-<a href="https://wa.me/6281314715708" target="_blank"
-class="w-full sm:w-auto bg-emerald-600 text-white font-bold px-10 py-4
-rounded-xl shadow-lg hover:bg-emerald-500 transition-all flex
-items-center justify-center group">
-<i class="fa-brands fa-whatsapp text-2xl mr-3
-group-hover:scale-110 transition-transform"></i>
-Konsultasi via WhatsApp
-</a>
-</div>
-</div>
-<!-- Copyright -->
-<div class="border-t border-slate-800 pt-8 mt-4">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex
-flex-col md:flex-row justify-between items-center gap-4 text-xs
-text-slate-500 text-center md:text-left">
-<p>© 2026 Johannes Hutasoit, A.Md., S.E., S.H., M.M.,
-C.Med. Hak cipta dilindungi.</p>
-<div class="flex flex-col sm:flex-row space-y-4
-sm:space-y-0 sm:space-x-6 items-center">
-<span class="flex items-center"><i class="fa-solid
-fa-location-dot mr-2 text-slate-400"></i> BEKASI UTARA</span>
-<div class="flex space-x-6">
-<a href="https://wa.me/6281314715708"
-class="hover:text-gold-400 transition"><i class="fa-brands fa-whatsapp
-text-lg"></i></a>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<!-- SCRIPT COUNTER PENGUNJUNG -->
-<script>
-// Logika sederhana untuk menghitung kunjungan
-let visits = localStorage.getItem('siteVisits');
-// Atur angka awal
-if (!visits) {
-visits = 109419;
-} else {
-visits = parseInt(visits) + 1;
-}
-localStorage.setItem('siteVisits', visits);
-// Memformat angka menjadi selalu 7 digit
-let formattedVisits = visits.toString().padStart(7, '0');
-let counterContainer =
-document.getElementById('visitor-counter');
-// Membangun kotak hitam dengan teks putih untuk setiap angka
-for (let i = 0; i < formattedVisits.length; i++) {
-let digitDiv = document.createElement('div');
-digitDiv.className = 'bg-black text-white font-mono px-2
-sm:px-3 py-1 sm:py-1.5 rounded-sm border border-slate-700 shadow-md
-text-lg sm:text-xl font-bold flex items-center justify-center
-min-w-[28px] sm:min-w-[36px]';
-digitDiv.innerText = formattedVisits[i];
-counterContainer.appendChild(digitDiv);
-}
-</script>
-</body>
+              target="_blank"
+              class="text-emerald-400 text-sm font-semibold hover:text-emerald-300 flex items-center transition"
+            >
+              <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> Konsultasi
+              Legal Bisnis
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 4. CALL TO ACTION & FOOTER -->
+    <footer
+      class="bg-navy-950 pt-20 pb-10 border-t border-gold-500/20 w-full overflow-hidden"
+    >
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          class="w-16 h-16 mx-auto rounded-full bg-navy-900 border border-gold-500 text-gold-400 flex items-center justify-center text-2xl mb-6"
+        >
+          <i class="fa-solid fa-scale-unbalanced"></i>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+          Butuh Pendampingan Hukum?
+        </h2>
+        <p
+          class="text-slate-400 mb-8 max-w-2xl mx-auto text-sm leading-relaxed"
+        >
+          Jangan biarkan masalah hukum Anda berlarut-larut. Konsultasikan
+          sekarang untuk mendapatkan analisis awal dan estimasi langkah
+          penanganan yang tepat, aman, dan rahasia.
+        </p>
+        <!-- Tombol WA saja (Email Dihapus) -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+        >
+          <a
+            href="https://wa.me/6281314715708"
+            target="_blank"
+            class="w-full sm:w-auto bg-emerald-600 text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:bg-emerald-500 transition-all flex items-center justify-center group"
+          >
+            <i
+              class="fa-brands fa-whatsapp text-2xl mr-3 group-hover:scale-110 transition-transform"
+            ></i>
+            Konsultasi via WhatsApp
+          </a>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="border-t border-slate-800 pt-8 mt-4">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 text-center md:text-left"
+        >
+          <p>
+            © 2026 Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med. Hak cipta
+            dilindungi.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center"
+          >
+            <span class="flex items-center"
+              ><i class="fa-solid fa-location-dot mr-2 text-slate-400"></i>
+              KELURAHAN TELUK PUCUNG VILLA INDAH PERMAI BLOK I 21 NO 20 BEKASI UTARA 17131 JAWA BARAT</span
+            >
+            <div class="flex space-x-6">
+              <a
+                href="https://wa.me/6281314715708"
+                class="hover:text-gold-400 transition"
+                ><i class="fa-brands fa-whatsapp text-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- SCRIPT COUNTER PENGUNJUNG -->
+    <script>
+      // Logika sederhana untuk menghitung kunjungan
+      let visits = localStorage.getItem('siteVisits');
+      // Atur angka awal
+      if (!visits) {
+      visits = 109419;
+      } else {
+      visits = parseInt(visits) + 1;
+      }
+      localStorage.setItem('siteVisits', visits);
+      // Memformat angka menjadi selalu 7 digit
+      let formattedVisits = visits.toString().padStart(7, '0');
+      let counterContainer =
+      document.getElementById('visitor-counter');
+      // Membangun kotak hitam dengan teks putih untuk setiap angka
+      for (let i = 0; i < formattedVisits.length; i++) {
+      let digitDiv = document.createElement('div');
+      digitDiv.className = 'bg-black text-white font-mono px-2
+      sm:px-3 py-1 sm:py-1.5 rounded-sm border border-slate-700 shadow-md
+      text-lg sm:text-xl font-bold flex items-center justify-center
+      min-w-[28px] sm:min-w-[36px]';
+      digitDiv.innerText = formattedVisits[i];
+      counterContainer.appendChild(digitDiv);
+      }
+    </script>
+  </body>
 </html>
