@@ -90,15 +90,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div class="max-w-2xl lg:w-2/3 w-full">
                 
-                <!-- FITUR WEBSITE VISITOR GLOBAL -->
+                <!-- FITUR WEBSITE VISITOR GLOBAL (WIDGET TERPASANG) -->
                 <div class="inline-flex flex-col sm:flex-row sm:items-center bg-navy-950 border border-gold-500/40 px-4 py-3 rounded-xl mb-8 shadow-xl gap-3">
                     <div class="flex items-center space-x-2 text-gold-400 text-xs font-bold tracking-wider uppercase">
                         <i class="fa-solid fa-eye text-gold-400 text-base animate-pulse"></i>
                         <span>Website Visitor:</span>
                     </div>
-                    <!-- Kotak angka yang di-generate secara online -->
-                    <div id="visitor-counter" class="flex space-x-1 sm:space-x-1.5">
-                        <span class="text-slate-400 text-xs italic">Memuat data...</span>
+                    <!-- Widget Counter -->
+                    <div class="flex items-center">
+                        <div id="sfcapq21rn1al32jb91yfj4mdp2z7sztxsf"></div>
+                        <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=apq21rn1al32jb91yfj4mdp2z7sztxsf&down=async" async></script>
+                        <noscript><a href="https://www.freecounterstat.com" title="website view counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=apq21rn1al32jb91yfj4mdp2z7sztxsf" border="0" title="website view counter" alt="website view counter"></a></noscript>
                     </div>
                 </div>
 
@@ -150,7 +152,7 @@
                 <!-- Right: Content -->
                 <div class="order-1 lg:order-2 w-full">
                     <span class="text-gold-600 font-bold tracking-widest uppercase text-xs">Profil & Kredensial</span>
-                    <!-- Nama disesuaikan agar 1 baris di HP dan tidak meluber ke samping -->
+                    <!-- Nama diatur agar 1 baris di HP dan tidak meluber ke samping -->
                     <h2 class="text-[13px] sm:text-lg lg:text-xl font-bold text-navy-900 mt-2 mb-6 whitespace-nowrap">
                         Johannes Hutasoit, A.Md., S.E., S.H., M.M., C.Med
                     </h2>
@@ -286,36 +288,5 @@
         </div>
     </footer>
 
-    <!-- SCRIPT COUNTER PENGUNJUNG GLOBAL (TERHUBUNG SECARA ONLINE) -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Menggunakan API publik CountAPI untuk mencatat kunjungan secara global
-        // Namespace dan key dibuat unik untuk website kantor hukum Bapak
-        fetch('https://api.countapi.xyz/hit/johanneshutasoit-law.netlify.app/visits')
-            .then(response => response.json())
-            .then(data => {
-                let visits = data.value;
-                let formattedVisits = visits.toString().padStart(7, '0');
-                let counterContainer = document.getElementById('visitor-counter');
-                
-                if (counterContainer) {
-                    counterContainer.innerHTML = '';
-                    for (let i = 0; i < formattedVisits.length; i++) {
-                        let digitDiv = document.createElement('div');
-                        digitDiv.className = 'bg-black text-white font-mono px-2 sm:px-2.5 py-1 rounded-sm border border-slate-700 shadow-md text-base sm:text-lg font-bold flex items-center justify-center min-w-[24px] sm:min-w-[30px]';
-                        digitDiv.innerText = formattedVisits[i];
-                        counterContainer.appendChild(digitDiv);
-                    }
-                }
-            })
-            .catch(error => {
-                // Cadangan jika jaringan bermasalah
-                let counterContainer = document.getElementById('visitor-counter');
-                if (counterContainer) {
-                    counterContainer.innerHTML = '<span class="text-gold-400 text-xs px-2 font-mono">0000001</span>';
-                }
-            });
-    });
-    </script>
 </body>
 </html>
