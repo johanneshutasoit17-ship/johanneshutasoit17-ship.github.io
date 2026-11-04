@@ -35,6 +35,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        /* CSS Tambahan untuk memperkecil dan merapikan widget counter */
+        .counter-wrapper img {
+            height: 20px !important; /* Memperkecil tinggi angka counter */
+            width: auto !important;
+            display: inline-block;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden w-full relative">
@@ -90,14 +96,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div class="max-w-2xl lg:w-2/3 w-full">
                 
-                <!-- FITUR WEBSITE VISITOR GLOBAL (WIDGET TERPASANG) -->
-                <div class="inline-flex flex-col sm:flex-row sm:items-center bg-navy-950 border border-gold-500/40 px-4 py-3 rounded-xl mb-8 shadow-xl gap-3">
-                    <div class="flex items-center space-x-2 text-gold-400 text-xs font-bold tracking-wider uppercase">
-                        <i class="fa-solid fa-eye text-gold-400 text-base animate-pulse"></i>
-                        <span>Website Visitor:</span>
+                <!-- FITUR WEBSITE VISITOR GLOBAL (DIPERKECIL & DIRAPIKAN) -->
+                <div class="inline-flex items-center bg-navy-950 border border-gold-500/30 px-3 py-1.5 rounded-lg mb-6 shadow-md gap-2.5">
+                    <div class="flex items-center space-x-1.5 text-gold-400 text-[11px] font-bold tracking-wider uppercase">
+                        <i class="fa-solid fa-eye text-gold-400 text-xs"></i>
+                        <span>Visitor:</span>
                     </div>
-                    <!-- Widget Counter -->
-                    <div class="flex items-center">
+                    <!-- Widget Counter yang sudah diskalakan jadi kecil -->
+                    <div class="counter-wrapper flex items-center">
                         <div id="sfcapq21rn1al32jb91yfj4mdp2z7sztxsf"></div>
                         <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=apq21rn1al32jb91yfj4mdp2z7sztxsf&down=async" async></script>
                         <noscript><a href="https://www.freecounterstat.com" title="website view counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=apq21rn1al32jb91yfj4mdp2z7sztxsf" border="0" title="website view counter" alt="website view counter"></a></noscript>
